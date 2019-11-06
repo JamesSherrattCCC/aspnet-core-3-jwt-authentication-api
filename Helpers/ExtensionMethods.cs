@@ -11,8 +11,14 @@ namespace WebApi.Helpers
         }
 
         public static User WithoutPassword(this User user) {
-            user.Password = null;
-            return user;
+            return new User { 
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Username = user.Username,
+                AuthenticateToken = user.AuthenticateToken,
+                RefreshToken = user.RefreshToken
+            };
         }
     }
 }

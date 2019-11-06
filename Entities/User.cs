@@ -7,6 +7,7 @@ namespace WebApi.Entities
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public string Token { get; set; }
+        public string AuthenticateToken { get; set; }
+        public string RefreshToken { get; set; }
     }
 }
